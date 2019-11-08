@@ -12,7 +12,7 @@ output:
 ---
 
 ## What is Data Conversion
-As we know that when constants and variables of different types are mixed in a expression, C++ applies automatic type conversion to the operandsas per rules. Similarly, an assignment operation also causes the auto conversion. _The type of data to the right of an expression of an ```assignment operator``` is automalically converted to the type of the variable on the left._ For e.g. 
+As we know that when constants and variables of different types are mixed in a expression, C++ applies automatic type conversion to the operands as per rules. Similarly, an assignment operation also causes the auto conversion. _The type of data to the right of an expression of an ```assignment operator``` is automalically converted to the type of the variable on the left._ For e.g. 
 ```cpp
 int m;
 float x = 3.14159;
@@ -97,3 +97,43 @@ The **class Y** type data is converted to the **class X** type data and the cone
 | Basic --> Class | N/A              | Constructor        |
 | Class --> Basic | Casting Operator | N/A                |
 | Class --> Class | Casting Operator | Constructor        |
+
+
+## Example Programs:
+```cpp
+#include<iostream.h>
+Class alpha{
+  int commonA;
+public:
+  alpha(){}
+  alpha(int x)
+  {
+    commonA = X;
+  }
+  int getvalue(){
+
+    cout<<" Counstructor Called "<<endl;
+    return commonA;
+  }
+};
+class beta
+{
+  int commonB;
+public:
+  beta(){}
+  beta(int x)
+  {
+      commonB = x;
+  }
+  beta(alpha temp)
+  {
+      commonB = temp.getvalue();
+  }
+};
+
+int main()
+{
+    alpha obj(10);
+    beta objb = obja;
+}
+```
